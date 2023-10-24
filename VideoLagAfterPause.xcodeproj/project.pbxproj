@@ -11,6 +11,10 @@
 		BEAC6B072AE6F6880000F321 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAC6B062AE6F6880000F321 /* ContentView.swift */; };
 		BEAC6B092AE6F6890000F321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B082AE6F6890000F321 /* Assets.xcassets */; };
 		BEAC6B0C2AE6F6890000F321 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B0B2AE6F6890000F321 /* Preview Assets.xcassets */; };
+		BEAC6B132AE6F7750000F321 /* example_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B122AE6F7750000F321 /* example_video.mp4 */; };
+		BEAC6B152AE701BB0000F321 /* example_video_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B142AE701BB0000F321 /* example_video_2.mp4 */; };
+		BEAC6B172AE702B90000F321 /* example_video_3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B162AE702B90000F321 /* example_video_3.mp4 */; };
+		BEAC6B192AE703A00000F321 /* light_leak_2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BEAC6B182AE703A00000F321 /* light_leak_2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		BEAC6B062AE6F6880000F321 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEAC6B082AE6F6890000F321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEAC6B0B2AE6F6890000F321 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEAC6B122AE6F7750000F321 /* example_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example_video.mp4; sourceTree = "<group>"; };
+		BEAC6B142AE701BB0000F321 /* example_video_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example_video_2.mp4; sourceTree = "<group>"; };
+		BEAC6B162AE702B90000F321 /* example_video_3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = example_video_3.mp4; sourceTree = "<group>"; };
+		BEAC6B182AE703A00000F321 /* light_leak_2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = light_leak_2.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		BEAC6B032AE6F6880000F321 /* VideoLagAfterPause */ = {
 			isa = PBXGroup;
 			children = (
+				BEAC6B122AE6F7750000F321 /* example_video.mp4 */,
+				BEAC6B142AE701BB0000F321 /* example_video_2.mp4 */,
+				BEAC6B162AE702B90000F321 /* example_video_3.mp4 */,
+				BEAC6B182AE703A00000F321 /* light_leak_2.mp4 */,
 				BEAC6B042AE6F6880000F321 /* VideoLagAfterPauseApp.swift */,
 				BEAC6B062AE6F6880000F321 /* ContentView.swift */,
 				BEAC6B082AE6F6890000F321 /* Assets.xcassets */,
@@ -125,7 +137,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAC6B152AE701BB0000F321 /* example_video_2.mp4 in Resources */,
+				BEAC6B132AE6F7750000F321 /* example_video.mp4 in Resources */,
+				BEAC6B172AE702B90000F321 /* example_video_3.mp4 in Resources */,
 				BEAC6B0C2AE6F6890000F321 /* Preview Assets.xcassets in Resources */,
+				BEAC6B192AE703A00000F321 /* light_leak_2.mp4 in Resources */,
 				BEAC6B092AE6F6890000F321 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
