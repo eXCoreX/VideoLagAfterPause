@@ -26,9 +26,9 @@ class FilterSettings {
 
 class VideoCompositor: NSObject, AVVideoCompositing {
     let requiredPixelBufferAttributesForRenderContext: [String: Any] =
-        [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
+    [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
     let sourcePixelBufferAttributes: [String: Any]? =
-        [kCVPixelBufferPixelFormatTypeKey as String: [kCVPixelFormatType_32BGRA]]
+    [kCVPixelBufferPixelFormatTypeKey as String: [kCVPixelFormatType_32BGRA]]
 
     func renderContextChanged(_ newRenderContext: AVVideoCompositionRenderContext) { }
 
@@ -75,8 +75,8 @@ class VideoCompositor: NSObject, AVVideoCompositing {
         let newBuffer = asyncVideoCompositionRequest.renderContext.newPixelBuffer()!
         CIContext().render(result, to: newBuffer)
 
-        asyncVideoCompositionRequest.finish(withComposedVideoFrame: newBuffer)    
-        
+        asyncVideoCompositionRequest.finish(withComposedVideoFrame: newBuffer)
+
         let dateFinished = Date.now
 
         // Time observing
@@ -189,29 +189,27 @@ struct ContentView: View {
                 .overlay(alignment: .topTrailing) {
                     gaugeView
                 }
-            VStack {
-                Button("Toggle inversion") {
-                    RequestTimeObserver.default.requestedRefreshTime = .now
-                    playerStore.toggleInversion()
-                    Task {
-                        withAnimation(nil) {
-                            ballOffset = 0
-                        }
-                        withAnimation(.linear(duration: 1)) {
-                            ballOffset = 400
-                        }
-                        try? await Task.sleep(nanoseconds: 1_000_000_000)
+            Button("Toggle inversion") {
+                RequestTimeObserver.default.requestedRefreshTime = .now
+                playerStore.toggleInversion()
+                Task {
+                    withAnimation(nil) {
                         ballOffset = 0
                     }
+                    withAnimation(.linear(duration: 1)) {
+                        ballOffset = 400
+                    }
+                    try? await Task.sleep(nanoseconds: 1_000_000_000)
+                    ballOffset = 0
                 }
-                .buttonStyle(.borderedProminent)
-
-                Text("Time to start request: \(timeObserver.timeToStart * 1000, format: .number.precision(.fractionLength(1))) ms")
-
-                Text("Time to complete render: \(timeObserver.timeToRender * 1000, format: .number.precision(.fractionLength(1))) ms")
-
-                Text("Last rendered time: \(timeObserver.lastRenderedTime.value)/\(timeObserver.lastRenderedTime.timescale)")
             }
+            .buttonStyle(.borderedProminent)
+
+            Text("Time to start request: \(timeObserver.timeToStart * 1000, format: .number.precision(.fractionLength(1))) ms")
+
+            Text("Time to complete render: \(timeObserver.timeToRender * 1000, format: .number.precision(.fractionLength(1))) ms")
+
+            Text("Last rendered time: \(timeObserver.lastRenderedTime.value)/\(timeObserver.lastRenderedTime.timescale)")
         }
     }
 
